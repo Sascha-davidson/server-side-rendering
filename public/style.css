@@ -372,7 +372,7 @@ dialog input[type="checkbox"]::before {
   content: "";
   width: 1.875em;
   aspect-ratio: 1/1;
-  margin: 0.1325em;
+  margin: 0.3em;
   border-radius: 50%;
   background: var(--c-color-dark-solid);
   position: absolute;
@@ -489,7 +489,7 @@ dialog input[type="checkbox"]:checked {
   }
 
 .header-style-content {
-  padding: var(--vervoerregio-path-box-height) 10% 9em 10%;
+  padding: var(--vervoerregio-path-box-height) 10% 8em 10%;
   height: 100%;
 }
 
@@ -676,6 +676,9 @@ dialog input[type="checkbox"]:checked {
 
   .logo-width {
     width: 22em;
+  }
+  .header-style-content{
+  padding: var(--vervoerregio-path-box-height) 10% 9em 10%;
   }
 }
 
