@@ -1,15 +1,12 @@
 <%- include('./partials/head') %>
     <%- include('./partials/header') %>
 
-        <div class="header-style-2">
+        <main>
 
-            <section class="header-style-title">
-                <h1>Afbeeldingen</h1>
-            </section>
-        </div>
+            <% api.principes.forEach(principe=> { %>
+                <%= principe.titel %>
+                    <%})%>
 
-        <% api.principes.forEach(principe=> { %>
-            <%= principe.titel %>
-                <%})%>
+        </main>
 
-                    <%- include('./partials/foot') %>   
+        <%- include('./partials/foot') %>

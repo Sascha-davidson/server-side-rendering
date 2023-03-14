@@ -72,10 +72,8 @@
     --site-header-height: 45px;
     --vervoerregio-path-box-height: 45px;
     --min-vervoerregio-path-box-height: -45px;
-
   }
 }
-
 
 * {
   margin: 0;
@@ -84,33 +82,33 @@
 }
 
 html,
-body{
-  overflow:hidden;
+body {
+  overflow-x: hidden;
 }
 
 body {
   font-family: "fira-sans", sans-serif;
   font-size: 1rem;
-  max-width: 120em;
-  margin: 0 auto;
-  background-color: var(--c-color-light);
+  /* max-width: 120em; */
+  /* margin: 0 auto; */
+  background-color: #e8e8e8;
   color: var(--c-color-dark);
   position: relative;
   overflow-x: hidden;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
 }
 
 h1 {
   /* font-size: 2em; */
   font-size: clamp(2em, 6vw, 4em);
   font-weight: 400;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
 }
 
 h1 strong {
   /* font-size: 2.5em; */
-  font-size: clamp(1.2em, 8vw, 6em);
+  font-size: clamp(1.2em, 8vw, 4em);
   font-weight: 700;
 }
 h2 {
@@ -148,8 +146,8 @@ label {
   font-size: 1em;
 }
 
-a{
-    font-size: 1.125em;
+a {
+  font-size: 1.125em;
 }
 
 @media screen and (min-width: 50em) {
@@ -184,6 +182,7 @@ header .site-header {
   padding: 0.5em 5%;
   height: var(--site-header-height);
   position: relative;
+  background-color: var(--c-background-light);
 }
 
 .site-identity {
@@ -199,7 +198,10 @@ header .site-header {
 /* menu*/
 
 .menu {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  z-index: 2;
 }
 
 .menu button {
@@ -213,15 +215,6 @@ header .site-header {
 .menu button:hover {
   background-color: var(--c-primary);
   color: var(--c-color-light);
-}
-
-@media screen and (max-width: 50em) {
-  .menu {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    z-index: 2;
-  }
 }
 
 header nav {
@@ -394,27 +387,6 @@ dialog input[type="checkbox"]:checked {
   transform: translateX(0);
 }
 
-@media screen and (min-width: 27.5em) {
-  dialog {
-    height: 60vh;
-  }
-}
-
-@media screen and (min-width: 50em) {
-  dialog {
-    padding: 3em;
-  }
-
-  dialog label {
-    font-size: 2em;
-    gap: 0.5em;
-  }
-
-  dialog button {
-    font-size: 2em;
-  }
-}
-
 /* volgende drie zijn de curve van huistyle*/
 .vervoerregio-path-box-devided {
   display: flex;
@@ -424,7 +396,7 @@ dialog input[type="checkbox"]:checked {
   z-index: 7;
 }
 
-.responsive-width{
+.responsive-width {
   width: 5%;
   height: 100%;
   background-color: var(--c-background-light);
@@ -453,7 +425,7 @@ dialog input[type="checkbox"]:checked {
   height: calc(100svh - var(--site-header-height));
   position: relative;
   z-index: 1;
-  max-height: 120em;
+  /* max-height: 120em; */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url("./assets/image/vervoerregio-amsterdam-header.jpg");
   background-color: #cccccc;
@@ -462,44 +434,42 @@ dialog input[type="checkbox"]:checked {
   background-size: cover;
   color: var(--c-color-light-solid);
   margin-top: var(--min-vervoerregio-path-box-height);
-  margin-bottom: var(--min-vervoerregio-path-box-height);
+  color: var(--c-color-light-solid);
 
   min-height: 37.5em;
+  /* max-height: 67.5em; */
+
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-  .header-style-2 {
-    color: var(--c-color-light-solid);
-    background: var(--c-primary);
-    background: linear-gradient(
-      315deg,
-      var(--c-secondary) 0%,
-      var(--c-primary) 100%
-    );
+.header-style-2 {
+  color: var(--c-color-light-solid);
+  background: var(--c-primary);
+  background: linear-gradient(
+    315deg,
+    var(--c-secondary) 0%,
+    var(--c-primary) 100%
+  );
 
-    padding: 0rem 10%;
-    padding-top: var(--vervoerregio-path-box-height);
-    margin-top: var(--min-vervoerregio-path-box-height);
-  }
+  padding: 0rem 10%;
+  padding-top: var(--vervoerregio-path-box-height);
+  margin-top: var(--min-vervoerregio-path-box-height);
+}
 
-  .header-style-2 h1{
-  padding: .2em 0;
-  }
+.header-style-2 h1 {
+  padding: 0.2em 0;
+}
 
 .header-style-content {
   padding: var(--vervoerregio-path-box-height) 10% 8em 10%;
   height: 100%;
 }
 
-.header-style-content p {
-  color: var(--c-color-light-solid);
-}
-
 .header-style .header-style-title {
   width: 100%;
-  max-width: 50em;
+  /* max-width: 50em; */
   min-height: 12.5em;
   height: 100%;
   display: flex;
@@ -514,19 +484,19 @@ dialog input[type="checkbox"]:checked {
   gap: 0.5em;
 }
 
-.header-style-title p strong {
-  color: var(--c-color-light-solid);
+.header-style-title p {
+  max-width: 38em;
 }
 
 .header-style-image {
   display: none;
+  margin-bottom: -3em;
 }
 
 .header-style-image img {
-  width: auto;
-  height: inherit;
-  max-height: inherit;
+  height: 100%;
   min-height: 28em;
+  padding-top: 20%;
 }
 
 .bottom-bar {
@@ -584,6 +554,17 @@ dialog input[type="checkbox"]:checked {
   color: var(--c-color-light-solid);
 }
 
+/* main deze dit in de vervolg pagina's */
+
+main {
+  width: 100%;
+  height: 100%;
+  color: var(--c-color-light-solid);
+  min-height: 37.5em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
 @media screen and (min-width: 22em) {
   .site-identity img {
@@ -595,23 +576,13 @@ dialog input[type="checkbox"]:checked {
   }
 }
 
+@media screen and (min-width: 27.5em) {
+  dialog {
+    height: 60vh;
+  }
+}
+
 @media screen and (min-width: 50em) {
-  .vervoerregio-path-box-devided {
-    height: var(--vervoerregio-path-box-height);
-  }
-
-  .header-style .header-style-title {
-    height: 100%;
-  }
-
-  .bottom-bar-box {
-    height: 6em;
-  }
-
-  .header-style button {
-    margin: 1em 0 1em 0;
-  }
-
   header nav {
     display: flex;
     flex-direction: row;
@@ -634,7 +605,7 @@ dialog input[type="checkbox"]:checked {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    gap: .2em;
+    gap: 0.2em;
     margin: 0;
     width: 100%;
   }
@@ -651,7 +622,7 @@ dialog input[type="checkbox"]:checked {
     font-size: 1.125em;
     display: inline-block;
     transition: all 0.3s ease-in-out;
-    padding: 0.2em .3em;
+    padding: 0.2em 0.3em;
     margin: 0;
     width: auto;
   }
@@ -667,7 +638,11 @@ dialog input[type="checkbox"]:checked {
   }
 
   nav button {
-    margin: 0 0 0 .3em;
+    margin: 0 0 0 0.3em;
+  }
+
+  .menu {
+    display: none;
   }
 
   .site-identity img {
@@ -677,13 +652,23 @@ dialog input[type="checkbox"]:checked {
   .logo-width {
     width: 22em;
   }
-  .header-style-content{
-  padding: var(--vervoerregio-path-box-height) 10% 9em 10%;
+
+  dialog {
+    padding: 3em;
   }
+
+  dialog label {
+    font-size: 2em;
+    gap: 0.5em;
+  }
+
+  dialog button {
+    font-size: 2em;
+  }
+
 }
 
 @media screen and (min-width: 74em) {
-
   .header-style-content {
     display: flex;
     justify-content: space-between;
@@ -692,11 +677,5 @@ dialog input[type="checkbox"]:checked {
 
   .header-style-image {
     display: block;
-    height: calc(100% + 3em);
-    padding-top: 3em;
-    width: auto;
   }
 }
-
-
-
