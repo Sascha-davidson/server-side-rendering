@@ -16,16 +16,16 @@ app.use(express.static('public'))
 
 // Maak een route voor de index
 app.get('/', function (req, res) {
-  // res.send('Hello World!')
   res.render('index', {active: '/'})
 })
 
-// Maak een route voor de index
+// Maak een route voor de toolboard
 app.get('/toolboard', function (req, res) {
   console.log(data)
   res.render('toolboard', {api: data, active: '/toolboard'})
 })
 
+// Maak een route voor de contact
 app.get('/contact', function (req, res) {
   console.log(data)
   res.render('contact', {api: data, active: '/contact'})
