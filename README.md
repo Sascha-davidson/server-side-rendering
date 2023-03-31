@@ -16,7 +16,7 @@
 ## Beschrijving
 Vervoerregio Amsterdam wilt een website die de verplichtingen voor toegankelijkheid van website's wilt uitgelegd krijgen. Deze website moet ook een afvink lijst krijgen zodat hun kunnen controleren of een website van een van hun partners wel of niet toegankelijk is.
 
-De pagina is te bezoeken via deze link: https://ill-plum-jay-ring.cyclic.app/
+De pagina is te bezoeken via deze link: https://curious-baseball-cap-boa.cyclic.app/
 
 User Story:
 
